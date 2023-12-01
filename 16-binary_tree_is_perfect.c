@@ -11,9 +11,9 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 {
 	size_t depth;
 
-	depth = leaf_depth(tree);
 	if (tree == NULL)
 		return (0);
+	depth = leaf_depth(tree);
 	return (binary_rec(tree, depth, 0));
 }
 
@@ -40,7 +40,7 @@ size_t leaf_depth(const binary_tree_t *tree)
 
 size_t binary_tree_depth(const binary_tree_t *tree)
 {
-	size_t depth = 0;
+	size_t depth = -1;
 
 	if (tree == NULL)
 		return (0);
